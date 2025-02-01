@@ -68,19 +68,12 @@ export class BaseService{
   }
 
 /////////////////////postData with auth////////////////////////
-  async postDataAuth(id=null, formData, logout){
-    let urlT = ''
-
-    if(id != null){
-      urlT = `${this.url}/${id}`
-    }else{
-      urlT = `${this.url}`
-    }
-
+  async postDataAuth(formData, logout){
+    
     try{
       const params = {
         method: "POST",
-        url: urlT,
+        url: this.url,
         data: formData,
         headers: {
           "Content-Type":"application/json"
