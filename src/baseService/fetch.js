@@ -1,50 +1,45 @@
 import axios from 'axios'
-import jwtDecode from "jwt-decode"
+import jwtDecode from 'jwt-decode'
 
-
-
-function getToken(){
-  console.log('entro a token')
+function getToken() {
   const TOKEN = 'token'
   return localStorage.getItem(TOKEN)
 }
 
-function hasExpiredToken(token){
-  
+function hasExpiredToken(token) {
   const tokeDecode = jwtDecode(token)
-  const expiredDate = tokeDecode.exp * 1000;
-  const currentDate = new Date().getTime();
-  if(currentDate > expiredDate){
-    return true;
-  } 
-    return false;
+  const expiredDate = tokeDecode.exp * 1000
+  const currentDate = new Date().getTime()
+  if (currentDate > expiredDate) {
+    return true
+  }
+  return false
 }
 
-async function authFetch(url, params, logout){
+async function authFetch(url, params, logout) {
   const token = getToken()
-  if(!token){
-    logout();
+  if (!token) {
+    logout()
   } else {
-    if(hasExpiredToken(token)){
-      logout();
+    if (hasExpiredToken(token)) {
+      logout()
     } else {
       const paramsTemp = {
         ...params,
         headers: {
           ...params?.headers,
-          authorization: `jwt ${token}`, 
+          authorization: `jwt ${token}`
         }
       }
       try {
         const response = await axios(paramsTemp)
-        return response;
+        return response
       } catch (error) {
-        console.log(error)
-        return error;
+        console.error(error)
+        return error
       }
-   }
-    
+    }
   }
 }
 
-export default authFetch;
+export default authFetch
