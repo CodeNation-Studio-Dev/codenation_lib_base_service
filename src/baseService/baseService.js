@@ -287,23 +287,17 @@ export class BaseService {
 
   /////////////////////delete auth////////////////////////
   async deleteAuthForm(id, formData, logout) {
-    if (id) {
-      const params = {
-        method: 'DELETE',
-        url: `${this.url}/${id}`,
-        data: formData,
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
+    if (id != null) {
+      urlT = `${this.url}/${id}`
     } else {
-      const params = {
-        method: 'DELETE',
-        url: `${this.url}`,
-        data: formData,
-        headers: {
-          'Content-Type': 'application/json'
-        }
+      urlT = `${this.url}`
+    }
+    const params = {
+      method: 'DELETE',
+      url: urlT,
+      data: formData,
+      headers: {
+        'Content-Type': 'application/json'
       }
     }
     try {
