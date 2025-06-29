@@ -288,7 +288,7 @@ export class BaseService {
   /////////////////////delete auth////////////////////////
   async deleteAuthForm(id, formData, logout) {
     if (id) {
-      params = {
+      const params = {
         method: 'DELETE',
         url: `${this.url}/${id}`,
         data: formData,
@@ -297,7 +297,7 @@ export class BaseService {
         }
       }
     } else {
-      params = {
+      const params = {
         method: 'DELETE',
         url: `${this.url}`,
         data: formData,
