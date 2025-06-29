@@ -287,6 +287,7 @@ export class BaseService {
 
   /////////////////////delete auth////////////////////////
   async deleteAuthForm(id, formData, logout) {
+    let urlT = ''
     if (id != null) {
       urlT = `${this.url}/${id}`
     } else {
