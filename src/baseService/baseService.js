@@ -287,7 +287,6 @@ export class BaseService {
 
   /////////////////////delete auth////////////////////////
   async deleteAuthForm(id, formData, logout) {
-    const params = ''
     if (id) {
       params = {
         method: 'DELETE',
