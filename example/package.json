@@ -10,13 +10,16 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@mui/material": "^5.8.7",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^5.18.0",
     "base-service": "file:..",
+    "caniuse-lite": "^1.0.30001747",
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
-    "react-scripts": "file:../node_modules/react-scripts"
+    "react-scripts": "^5.0.1",
+    "webpack": "^5.102.0",
+    "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
