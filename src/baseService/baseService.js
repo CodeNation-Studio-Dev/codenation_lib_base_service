@@ -372,11 +372,11 @@ export class BaseService {
     }
   }
 
-  async uploadPdfPost(formData, logout) {
+  async uploadPdfPut(formData, logout) {
     let urlParams = this.url
     try {
       const params = {
-        method: 'POST',
+        method: 'PUT',
         url: `${this.url}`,
         data: formData,
         headers: {
