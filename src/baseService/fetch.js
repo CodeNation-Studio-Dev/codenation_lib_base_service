@@ -1,9 +1,30 @@
 import axios from 'axios'
 import jwtDecode from 'jwt-decode'
 
+function getCookie(name) {
+  const nameEQ = name + '='
+  const ca = document.cookie.split(';')
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i]
+    while (c.charAt(0) === ' ') {
+      // Remove leading whitespace
+      c = c.substring(1, c.length)
+    }
+    if (c.indexOf(nameEQ) === 0) {
+      // Check if this cookie starts with the desired name
+      return c.substring(nameEQ.length, c.length)
+    }
+  }
+  return null // Return null if the cookie is not found
+}
+
 function getToken() {
   const TOKEN = 'token'
-  return localStorage.getItem(TOKEN)
+  if (getCookie(TOKEN) !== null) {
+    return getCookie(TOKEN)
+  } else {
+    return localStorage.getItem(TOKEN)
+  }
 }
 
 function hasExpiredToken(token) {

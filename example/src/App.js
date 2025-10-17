@@ -84,8 +84,8 @@ const App = () => {
       'token',
       'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6Im1lbW8iLCJleHAiOjE2NTMwMTEwMTMsImVtYWlsIjoib21lbS5lbWFudWVsKzFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE2NTE3MTUwMTN9.lNRm02eFOBKwun2rky6Tst-Rn71a4TOo4k-aW4mVhHs'
     )
-    // document.cookie =
-    //   'token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6Im1lbW8iLCJleHAiOjE2NTMwMTEwMTMsImVtYWlsIjoib21lbS5lbWFudWVsKzFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE2NTE3MTUwMTN9.lNRm02eFOBKwun2rky6Tst-Rn71a4TOo4k-aW4mVhHs; path=/; max-age=3600; secure; samesite=strict'
+    document.cookie =
+      'token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6Im1lbW8iLCJleHAiOjE2NTMwMTEwMTMsImVtYWlsIjoib21lbS5lbWFudWVsKzFAZ21haWwuY29tIiwib3JpZ19pYXQiOjE2NTE3MTUwMTN9.lNRm02eFOBKwun2rky6Tst-Rn71a4TOo4k-aW4mVhHs; path=/; max-age=3600; secure; samesite=lax;'
 
     // let irequestFilter = []
     // irequestFilter.push({'key':'page', 'value': '1'})
